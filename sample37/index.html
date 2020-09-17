@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+    <div class="frame">
+        <h1 class="frame__title">JavaScript</h1>
+
+        <div class="frame__inner">
+            <div><label><input type="checkbox" name="agree" id="agree"> 同意する</label></div>
+            <div><button id="submit" disabled>送信する</button></div>
+            <!-- ここに、JavaScriptを記述します -->
+            <script>
+                const agree = document.querySelector('#agree');
+                agree.addEventListener('change', function() {
+                    // if(agree.checked) {
+                    //     document.querySelector('#submit').disabled = false;
+                    // } else {
+                    //     document.querySelector('#submit').disabled = true;
+                    // }
+
+                    // const submit = document.querySelector('#submit');
+                    // agree.checked ? submit.disabled = false: submit.disabled = true;
+
+                    document.querySelector('#submit').disabled = !agree.checked;
+                })
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
